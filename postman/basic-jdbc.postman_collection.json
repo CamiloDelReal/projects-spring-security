@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "9abb91bd-82f7-49c8-91ec-0669f4de2a49",
+		"name": "basic-jdbc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Unsecured",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9012/unsecured",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9012",
+					"path": [
+						"unsecured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secured",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "guest",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9012/secured",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9012",
+					"path": [
+						"secured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secured with write authority",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "root",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9012/secured/withwrite",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9012",
+					"path": [
+						"secured",
+						"withwrite"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
