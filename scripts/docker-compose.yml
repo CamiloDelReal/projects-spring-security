@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  databasebasicjdbc:
+    image: mysql
+    mem_limit: 700m
+    hostname: database
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: basic-jdbc
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - securitynet
+
+networks:
+  securitynet:
