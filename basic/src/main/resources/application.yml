@@ -1,0 +1,9 @@
+server:
+  port: 9011
+
+spring:
+  security:
+    user:
+      name: root
+      password: 123
+      roles: read,write
