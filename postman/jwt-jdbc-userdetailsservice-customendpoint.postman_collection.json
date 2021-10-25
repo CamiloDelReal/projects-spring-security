@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "653dcdd0-ed5d-46ee-b632-16329c04aaad",
+		"name": "jwt-jdbc-userdetailsservice-customendpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Unsecured",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9014/unsecured",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9014",
+					"path": [
+						"unsecured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"guest\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9014/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9014",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secured",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlc0FuZEF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTi0tQ1JFQVRFX1VTRVItLVJFQURfVVNFUi0tVVBEQVRFX1VTRVItLURFTEVURV9VU0VSIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE2MzUxNjMyOTUsImV4cCI6MTYzNTE3MzI5NX0.mla_Ofyi3X5D9J7wupUiOaCMSkRLLWBwustW8rBMeQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9014/secured",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9014",
+					"path": [
+						"secured"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secured with admin role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlc0FuZEF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTi0tQ1JFQVRFX1VTRVItLVJFQURfVVNFUi0tVVBEQVRFX1VTRVItLURFTEVURV9VU0VSIiwic3ViIjoiYWRtaW4iLCJpYXQiOjE2MzUxNjMyOTUsImV4cCI6MTYzNTE3MzI5NX0.mla_Ofyi3X5D9J7wupUiOaCMSkRLLWBwustW8rBMeQM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9014/secured/withadmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9014",
+					"path": [
+						"secured",
+						"withadmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secured with create user authority",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlc0FuZEF1dGhvcml0aWVzIjoiUk9MRV9HVUVTVC0tUkVBRF9VU0VSIiwic3ViIjoiZ3Vlc3QiLCJpYXQiOjE2MzUxNjMzMTYsImV4cCI6MTYzNTE3MzMxNn0.xSH3CUkRzKR8jX8YdaUj8FZVmGgHQ5WhPwyDl7mB-Q0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9014/secured/withcreate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9014",
+					"path": [
+						"secured",
+						"withcreate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
