@@ -29,6 +29,16 @@ Differents ways to handle authentication and authorization with Spring Security.
   * Database schema in schema.sql and testing data in data.sql
   * Unsecured, secured and secured with role requirement endpoints
   
+- JWT authentication with relational database using custom a UserDetailsService and a custom login endpoint [jwt-jdbc-userdetailsservice-customendpoint](https://github.com/CamiloDelReal/projects-spring-security/tree/main/jwt-jdbc-userdetailsservice-customendpoint)
+  * Spring JWT authentication
+  * Relational database for users management (MySQL)
+  * User entity with JPA repository
+  * Custom UserDetailsService to load user from database and inject it into the standart authentication provider
+  * Custom AuthorizationProvider to authenticate incoming requests
+  * Security access defined WebSecurityConfigurerAdapter class
+  * Database population with a seeder class
+  * Unsecured, secured and secured with role and authority requirement endpoints
+  
 ### Technologies used
 - Spring Boot
   * Web application
